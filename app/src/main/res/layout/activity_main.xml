@@ -1,18 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/notaRelativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/rl_tv_nota1"
+            style="@style/tv_nota"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rl_tv_nota1"/>
+
+        <TextView
+            android:id="@+id/rl_tv_nota2"
+            style="@style/tv_nota"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_tv_nota1"
+            android:text="@string/rl_tv_nota2" />
+
+        <TextView
+            android:id="@+id/rl_tv_nota3"
+            style="@style/tv_nota"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_tv_nota2"
+            android:text="@string/rl_tv_nota3" />
+
+        <TextView
+            android:id="@+id/rl_tv_nota4"
+            style="@style/tv_nota"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_tv_nota3"
+            android:text="@string/rl_tv_nota4" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/valorRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/notaRelativeLayout"
+        app:layout_constraintTop_toTopOf="@id/notaRelativeLayout"
+        app:layout_constraintBottom_toBottomOf="@id/notaRelativeLayout">
+
+        <EditText
+            android:id="@+id/rl_et_nota1"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_margin="11dp"
+            android:hint="@string/rl_et_nota1"
+            style="@style/et_nota_numb" />
+
+        <EditText
+            android:id="@+id/rl_et_nota2"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/rl_et_nota2"
+            style="@style/et_nota_numb"
+            android:layout_below="@+id/rl_et_nota1"/>
+
+        <EditText
+            android:id="@+id/rl_et_nota3"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/rl_et_nota2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="22dp"
+            android:hint="@string/rl_et_nota3"
+            style="@style/et_nota_numb"/>
+
+        <EditText
+            android:id="@+id/rl_et_nota4"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/rl_et_nota3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/rl_et_nota4"
+            style="@style/et_nota_numb"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_faltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_faltas"
+        style="@style/tv_nota"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10sp"
+        app:layout_constraintStart_toStartOf="@id/notaRelativeLayout"
+        app:layout_constraintTop_toBottomOf="@id/notaRelativeLayout"/>
+
+    <EditText
+        android:id="@+id/et_faltas"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_faltas"
+        style="@style/et_nota_numb"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/valorRelativeLayout"
+        app:layout_constraintStart_toStartOf="@id/valorRelativeLayout"/>
+
+    <Button
+        android:id="@+id/bt_calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/bt_calcular"
+        android:backgroundTint="@color/dark_green"
+        app:layout_constraintTop_toBottomOf="@id/tv_faltas"
+        app:layout_constraintStart_toStartOf="@id/tv_faltas"
+        app:layout_constraintEnd_toEndOf="@id/et_faltas"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

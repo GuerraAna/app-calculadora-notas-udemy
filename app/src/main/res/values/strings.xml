@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">App Calculadora IMC Udemy</string>
+    <string name="app_name">Calculadora IMC</string>
+    <!--Exigência de valores-->
+    <string name="rl_tv_nota1">Nota 1:</string>
+    <string name="rl_tv_nota2">Nota 2:</string>
+    <string name="rl_tv_nota3">Nota 3:</string>
+    <string name="rl_tv_nota4">Nota 4:</string>
+    <string name="tv_faltas">Faltas:</string>
+    <!--Entrada dos valores-->
+    <string name="rl_et_nota1">Exemplo: 2.5</string>
+    <string name="rl_et_nota2">Exemplo: 2.5</string>
+    <string name="rl_et_nota3">Exemplo: 2.5</string>
+    <string name="rl_et_nota4">Exemplo: 2.5</string>
+    <string name="et_faltas">Exemplo: 10</string>
+    <!--Botão Calcular-->
+    <string name="bt_calcular">Calcular</string>
 </resources>
